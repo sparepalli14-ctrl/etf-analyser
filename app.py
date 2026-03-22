@@ -58,9 +58,9 @@ def fetch_all():
             if data.empty or len(data) < 20:
                 continue
 
-            data["RSI"]    = ta.rsi(data["Close"], length=14)
-            data["SMA50"]  = ta.sma(data["Close"], length=50)
-            data["SMA200"] = ta.sma(data["Close"], length=200)
+                data["RSI"]    = ta_lib.momentum.RSIIndicator(data["Close"], window=14).rsi()
+                data["SMA50"]  = ta_lib.trend.SMAIndicator(data["Close"], window=50).sma_indicator()
+                data["SMA200"] = ta_lib.trend.SMAIndicator(data["Close"], window=200).sma_indicator()
 
             price  = data["Close"].iloc[-1]
             rsi    = data["RSI"].iloc[-1]
