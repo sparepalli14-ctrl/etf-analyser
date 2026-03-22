@@ -1,6 +1,7 @@
-yfinance
-pandas
-pandas-ta
-matplotlib
-streamlit
-anthropic
+yfinance==0.2.54
+pandas==2.2.3
+pandas-ta==0.3.14b
+matplotlib==3.9.2
+streamlit==1.40.0
+anthropic==0.40.0
+numpy==1.26.4
